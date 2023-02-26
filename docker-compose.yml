@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  mariadb:
+    image: mariadb:10.5.11-focal
+    environment:
+      MARIADB_USER: "root"
+      MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: 1
+      MARIADB_DATABASE: "test"
+    hostname: mariadb
+    ports:
+      - 3306:3306
